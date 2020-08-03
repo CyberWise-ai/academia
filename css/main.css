@@ -337,7 +337,6 @@ a {
   background-image: url(../img/woman-865111_1920.jpg);
   background-size: cover;
   background-position: top center;
-  background-attachment: fixed;
   position: relative;
   z-index: 1;
 }
@@ -399,8 +398,8 @@ a {
   animation-delay: 1s;
 }
 
-
 /* Final header  */
+
 /** presentacion **/
 
 #presentacion .presentacion {
@@ -455,6 +454,7 @@ a {
 }
 
 /** Final presentacion **/
+
 /** emprende **/
 
 
@@ -507,6 +507,7 @@ a {
 }
 
 /** Final emprende **/
+
 /** Registrate **/
 
 #registrate .registrate {
@@ -547,8 +548,8 @@ a {
   color: white;
 }
 
-
 /** Final registrate **/
+
 /** Rangos **/
 
 #rangos .rangos {
@@ -579,17 +580,17 @@ a {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  line-height: 1;
+  line-height: .2;
   padding: 3rem;
   font-size: 1rem;
   margin: 1rem 5%;
-  border-radius: 1rem;
   color: white;
   position: relative;
   z-index: 1;
   overflow: hidden;
   text-align: center;
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  border-radius: 1rem;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
@@ -598,11 +599,11 @@ a {
 
 
 #rangos .rangos__bottom-item span {
-  padding: 1rem 3rem;
+  padding: 2rem 3rem;
   font-size: 1.4rem;
   border-radius: 1rem;
   background-color: crimson;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 #rangos .rangos__bottom-item p {
@@ -623,7 +624,12 @@ a {
 #testimonios .testimonios {
   flex-direction: column;
   padding: 10rem 0;
+  margin: auto;
+  max-width: 150rem;
 
+}
+#testimonios .testimonios__top{
+  margin-bottom: 5rem;
 }
 
 #testimonios .testimonios__bottom {
@@ -635,10 +641,6 @@ a {
   margin: 2rem;
 }
 
-#testimonios .testimonios__bottom-info {
-  text-align: center;
-}
-
 #testimonios .testimonios .testimonios__bottom-item {
   flex-basis: 80%;
   display: flex;
@@ -646,8 +648,11 @@ a {
   flex-direction: column;
   padding: 3rem;
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-  margin: 2rem auto;
+  margin: 1rem 5%;
+  position: relative;
   z-index: 1;
+  overflow: hidden;
+  text-align: center;
   border-radius: 1rem;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
@@ -659,10 +664,9 @@ a {
   height: 10rem;
   width: 10rem;
   margin: 0 auto;
-  border-radius: 50%;
   border: 5px solid #fff;
-  background-color: #000;
   overflow: hidden;
+  border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -674,16 +678,16 @@ a {
   width: 100%;
 }
 
-
 /** Final seccion testimonios **/
+
 /*  Seccion Contacto */
+
 #contacto .contacto {
   flex-direction: column;
-  max-width: 1200px;
+  max-width: 120rem;
   margin: 0 auto;
   padding: 10rem 0;
 }
-
 
 #contacto .contacto__bottom {
   width: 400px;
@@ -703,6 +707,10 @@ a {
   flex-direction: column;
   box-shadow: 0px 0px 18px 0 #0000002c;
   transition: .3s ease box-shadow;
+  -webkit-transition: .3s ease box-shadow;
+  -moz-transition: .3s ease box-shadow;
+  -ms-transition: .3s ease box-shadow;
+  -o-transition: .3s ease box-shadow;
 }
 
 #contacto .contacto__bottom-item:hover {
@@ -780,18 +788,15 @@ a {
 
 /** Nosotros  Banner**/
 
-.nosotros__banner {
+#hero__banner {
   background-image: url(../img/conference-room-768441_1280.jpg);
   background-size: cover;
-  height: 8rem;
-  display: flex;
-  align-items: center;
-  justify-content: left;
+  background-position: top center;
   position: relative;
   z-index: 1;
 }
 
-.nosotros__banner::after {
+#hero__banner::after {
   content: '';
   position: absolute;
   left: 0;
@@ -803,9 +808,17 @@ a {
   z-index: -1;
 }
 
-.nosotros__banner h2 {
+#hero__banner .hero__banner {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 5rem;
+  justify-content: flex-start;
+}
+
+.hero__text h2 {
   font-weight: 300;
   color: white;
+
 }
 
 /**End Nosotros  Banner**/
@@ -851,7 +864,7 @@ a {
 /* Representantes */
 
 #representantes .representantes {
-  flex-direction: column-reverse;
+  flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -904,7 +917,6 @@ a {
 
 }
 
-
 #representantes .col-right h2 {
   font-size: 2.5rem;
   font-weight: 500;
@@ -917,14 +929,11 @@ a {
   text-align: center;
 }
 
-
-
 /** End Representantes **/
-
-
 
 /* keyframes*/
 @keyframes hamburger_puls {
+
   0% {
     opacity: 1;
     transform: scale(1);
@@ -937,6 +946,7 @@ a {
 }
 
 @keyframes text_reveal_box {
+
   50% {
     width: 100%;
     left: 0;
@@ -958,6 +968,7 @@ a {
 
 /* Media  Query For tablet*/
 @media only screen and (min-width:768px) {
+
   .cta {
     font-size: 2rem;
     padding: 1rem 3rem;
@@ -983,18 +994,16 @@ a {
     font-size: 3.6rem;
   }
 
-
   /* Hero */
+
   #header h2 {
     font-size: 6rem;
   }
 
   /* End Hero */
 
-  /* Presentacion */
-
-  /* End Presentacion */
   /*  Emprende */
+
   #emprende .emprende__items {
     display: flex;
     flex-wrap: wrap;
@@ -1018,18 +1027,16 @@ a {
   /*  End Rangos */
 
   /* Testimonios */
-  #testimonios .testimonios__bottom{
-    flex-direction: row;
-    display: flex;
-  }
-  
+
   #testimonios .testimonios .testimonios__bottom-item {
-    flex-basis: 30%;
-    margin: 2.5%;
+    flex-basis: 45%;
+    margin: 1%;
   }
 
   /* End Testimonios */
+
   /*  Nosotros */
+
   #nosotros .nosotros__items {
     display: flex;
     flex-direction: row;
@@ -1041,16 +1048,14 @@ a {
     margin: 1.5%;
   }
 
-  #representantes .representantes__item{
+  #representantes .representantes__item {
     display: flex;
     flex-direction: row;
-
   }
-  #representantes .representantes__item{
+
+  #representantes .representantes__item {
     margin: 5rem;
   }
-
-  
 
   #representantes .representantes .col-left .representantes-img::after {
     left: -4.5rem;
@@ -1080,6 +1085,7 @@ a {
 /* End Media  Query For tablet*/
 
 /* Media Query For Desktop */
+
 @media only screen and (min-width: 1200px) {
 
   .hero__texto h2 {
@@ -1118,12 +1124,12 @@ a {
   }
 
   /*End Navegacion */
+
   /* Presentacion */
 
   #presentacion .presentacion__bottom {
     display: flex;
     flex-direction: row;
-
   }
 
   #presentacion .presentacion__item {
@@ -1136,6 +1142,7 @@ a {
   }
 
   /* End presentacion */
+
   /* emprende */
   #emprende .emprende__items {
     display: flex;
@@ -1151,7 +1158,9 @@ a {
   }
 
   /* End emprende */
+
   /* Rangos */
+
   #rangos .rangos__bottom {
     display: flex;
   }
@@ -1160,7 +1169,6 @@ a {
     flex-basis: 20%;
     margin: 2.5%;
     line-height: .2;
-
   }
 
   #rangos .rangos__bottom-item span {
@@ -1172,13 +1180,18 @@ a {
   }
 
   /* End Rangos */
+
   /*  Testimonios */
-   
-  #testimonios .testimonios__bottom-item{
+
+  #testimonios .testimonios__bottom{
+    display: flex;
+  }
+  #testimonios .testimonios__bottom-item {
     flex-basis: 30%;
-    margin: 1.5%;
+    margin: auto;
 
   }
+
   /* End Testimonios */
   /* Contacto */
   #contacto .contacto {
